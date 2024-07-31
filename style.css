@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.hero {
+  background: #1d2026;
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+  position: relative;
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 20px 8%;
+}
+nav .menu-img {
+  width: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+nav .logo {
+  width: 160px;
+  cursor: pointer;
+}
+nav ul {
+  flex: 1;
+  text-align: right;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+button {
+  background: #efefef;
+  height: 30px;
+  width: 60px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
+}
+button span {
+  display: block;
+  background: #999;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  margin-left: 2px;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  transition: margin-left 0.3s, background 0.3s;
+}
+button.active {
+  background: #00986f;
+}
+button.active span {
+  margin-left: 32px;
+  background: #fff;
+}
+.lamp-container {
+  position: absolute;
+  top: -20px;
+  left: 22%;
+  transform: translateX(-50%);
+  width: 200px;
+  text-align: center;
+}
+.lamp {
+  width: 100%;
+}
+.light {
+  display: block;
+  width: 700px;
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  margin-left: -10px;
+  transform: translate(-50%);
+  opacity: 0;
+  animation: dim 0.3s forwards;
+}
+.light.active {
+  animation: brighten 0.3s forwards;
+}
+@keyframes brighten {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.text-container {
+  max-width: 600px;
+  margin-top: 7%;
+  margin-left: 50%;
+}
+.text-container h1 {
+  font-size: 80px;
+  font-weight: 400;
+}
+.text-container a {
+  text-decoration: none;
+  background: #00986f;
+  padding: 14px 40px;
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 30px;
+  border-radius: 30px;
+}
